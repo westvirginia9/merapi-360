@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(../font/Poppins.ttf) format('truetype');
+}
+
+body {
+    background-size: cover;
+    background-image: url(../assets/bg-merapi.jpg);
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.navbar a {
+    color: azure;
+}
+.navbar a:hover {
+    color: rgb(190, 40, 40);
+    border-bottom: solid rgb(190, 40, 40) 3px;
+}
+
+.page {
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form {
+    width: 100%;
+}
+
+.form-value {
+    width: 70%;
+    outline-color: rgba(190, 40, 40, 0.5);
+}
+
+.form-label {
+    text-align: start;
+    width: 70%;
+    display: inline-block;
+}
+
+.button {
+    background-color: rgb(190, 40, 40);
+    border: none;
+    width: 20%;
+    color: azure;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 8%;
+}
+.button:hover {
+    background-color: rgb(99, 99, 198);
+    border: none;
+    width: 20%;
+    color: azure;
+}
+

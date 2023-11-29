@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(../font/Poppins.ttf) format('truetype');
+}
+
+body {
+    background-size: cover;
+    background-image: url(../assets/bg-merapi.jpg);
+    /* margin: 0; */
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.navbar a {
+    color: azure;
+}
+.navbar a:hover {
+    color: rgb(190, 40, 40);
+    border-bottom: solid rgb(190, 40, 40) 3px;
+}
+
+
+.page {
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.user {
+    width: 60%;
+    border: solid 0px;
+    border-bottom: solid 1px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.user:focus {
+    outline: none;
+}
+
+.pass {
+    width: 60%;
+    border: solid 0px;
+    border-bottom: solid 1px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.pass:focus {
+    outline: none;
+}
+
+.form-cbx {
+    margin-right: 340px;
+    margin-top: 2%;
+    margin-bottom: 6%;
+}
+.cbox {
+    width: 17px;
+    height: 17px;
+    margin-right: 1%;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+.cbox-label {
+    position: absolute;
+    font-size: small;
+}
+
+
+.button {
+    border: none;
+    background: linear-gradient(to right, #BE2828, #be5528);
+    width: 20%;
+    color: azure;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 8%;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(99, 99, 198);
+    border: none;
+    width: 20%;
+    color: azure;
+}
+
+#warningAll {
+    color: rgb(190, 40, 40);
+    margin-bottom: 2%;
+    display: none;
+}
+#warningUser {
+    color: rgb(190, 40, 40);
+    margin-bottom: 2%;
+    display: none;
+}
+#warningPass {
+    color: rgb(190, 40, 40);
+    margin-bottom: 2%;
+    display: none;
+}
