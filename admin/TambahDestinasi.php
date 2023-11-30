@@ -39,22 +39,22 @@ include "../php/koneksi.php"
         </div>
 
         <div class="content">
-            <select class="kota" id="">
-                <option value="" disabled selected hidden>Pilih Kota</option>
-                <option value="Jogjakarta">Jogjakarta</option>
-                <option value="Magelang">Magelang</option>
-                <option value="Klaten">Klaten</option>
-                <option value="Boyolali">Boyolali</option>
-            </select> <br>
+            <form action="TambahDestinasi.php" method="post" enctype="multipart/form-data">
+                <?php include "kotaController.php"; ?>
+                <br>
 
-            <input type="text" class="wisata" placeholder="Nama Wisata"> <br>
+                <input type="text" class="wisata" name="nama_wisata" placeholder="Nama Wisata" required> <br>
 
-            <input type="text" class="deskripsi" placeholder="Deskripsi"> <br>
+                <input type="text" class="deskripsi" name="deskripsi" placeholder="Deskripsi" required> <br>
 
-            <input type="text" class="harga" placeholder="Harga Tiket"> <br>
+                <input type="text" class="harga" name="harga" placeholder="Harga Tiket" required> <br>
 
-            <input type="submit" value="Simpan" id="simpanUbah"> <br>
-            <input type="submit" value="Batal" id="batalUbah">
+                <label for="gambar">Upload Gambar:</label>
+                <input type="file" name="gambar" id="gambar" required> <br>
+
+                <input type="submit" value="Simpan" id="simpanWisata"> <br>
+                <input type="reset" value="Batal" id="batalWisata">
+            </form>
         </div>
 
     </div>
