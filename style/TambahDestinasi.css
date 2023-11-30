@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(/font/Poppins.ttf) format('truetype');
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.head {
+    width: 100%;
+    border-bottom: solid black 1px;
+    margin: auto; 
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    display: block; /* Untuk menghilangkan default bottom space pada elemen img */
+    margin: 0 auto; /* Untuk mengatur img ke tengah */
+}
+
+.button input {
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    padding: 8%;
+    background-color: #BE2828;
+    color: azure;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.button input:hover {
+    background-color: #181313;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content {
+    width: 50%;
+    margin: auto;
+    display: inline-flexbox;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.content input {
+    font-family: 'Poppins', sans-serif;
+}
+.content select {
+    font-family: 'Poppins', sans-serif;
+}
+
+.kota, .wisata, .harga {
+    margin-bottom: 5%;
+    padding: 2%;
+}
+.kota {
+    margin-top: 10%;
+    width: 60%;
+}
+.wisata, .harga {
+    width: 55%;
+}
+
+#simpanUbah {
+    width: 20%;
+    margin-top: 5%;
+    padding: 1%;
+    background-color: #66D9EF;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+#simpanUbah:hover {
+    width: 20%;
+    border: solid 2px #66D9EF;
+    background: none;
+    color: #181313;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#batalUbah {
+    width: 20%;
+    margin-top: 3%;
+    padding: 1%;
+    background-color: #BE2828;
+    color: azure;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+#batalUbah:hover {
+    width: 20%;
+    background: none;
+    color: #BE2828;
+    border: solid 2px #BE2828;
+    font-weight: bold;
+    cursor: pointer;
+}
