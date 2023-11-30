@@ -39,7 +39,7 @@ include "../php/koneksi.php"
         </div>
 
         <div class="content">
-            <form action="TambahDestinasi.php" method="post" enctype="multipart/form-data">
+            <form action="tambahPaket.php" method="post" enctype="multipart/form-data">
                 <?php include "kotaController.php"; ?>
                 <br>
 
