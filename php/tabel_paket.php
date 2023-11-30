@@ -10,7 +10,7 @@ $sql = "CREATE TABLE paket (
     nama_paket VARCHAR(255) NOT NULL,
     deskripsi TEXT,
     harga DECIMAL(10, 2) NOT NULL,
-    gambar VARCHAR(255),
+    gambar BLOB,
     id_kota INT,
     FOREIGN KEY (id_kota) REFERENCES kota(id_kota)
 )";

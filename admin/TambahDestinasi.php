@@ -26,7 +26,7 @@ include "../php/koneksi.php"
             <table border="0">
                 <tr align="center" valign="center" >
                     <td class="logo" width="120">
-                        <img src="/assets/LogoM360.png" alt="" width="150">
+                        <img src="../assets/LogoM360.png" alt="" width="150">
                     </td>
                     <td class="welcome" width="1000">
                         <h1>Tambah Destinasi Wisata</h5>
@@ -52,8 +52,8 @@ include "../php/koneksi.php"
                 <label for="gambar">Upload Gambar:</label>
                 <input type="file" name="gambar" id="gambar" required> <br>
 
-                <input type="submit" value="Simpan" id="simpanWisata"> <br>
-                <input type="reset" value="Batal" id="batalWisata">
+                <input type="submit" value="Simpan" id="simpanUbah"> <br>
+                <input type="submit" value="Batal" id="batalUbah">
             </form>
         </div>
 
