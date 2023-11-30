@@ -24,15 +24,32 @@ body {
     margin: auto;
     display: inline-block;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
 }
 .navbar a {
     color: azure;
+    position: relative; /* Menambahkan properti position relative untuk menyertakan posisi relatif pada link. */
+    text-decoration: none; /* Menghilangkan garis bawah bawaan dari tautan. */
 }
 .navbar a:hover {
     color: rgb(190, 40, 40);
-    border-bottom: solid rgb(190, 40, 40) 3px;
+}
+/* Menambahkan transisi pada border-bottom untuk efek animasi. */
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 50%;
+    background-color: rgb(190, 40, 40);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Menambahkan transisi pada width dan left. */
+    border-radius: 5px;
+}
+.navbar a:hover::before {
+    width: 100%; /* Membuat lebar garis bawah menjadi 100% ketika dihover. */
+    left: 0; /* Menyesuaikan posisi left agar garis bawah mulai dari ujung kiri link. */
 }
 
 
