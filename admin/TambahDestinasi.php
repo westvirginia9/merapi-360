@@ -1,10 +1,24 @@
+<?php
+
+include "../php/koneksi.php"
+
+
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style/TambahDestinasi.css">
+    <link rel="stylesheet" href="../style/TambahDestinasi.css">
 </head>
 <body>
     <div class="container">
@@ -34,6 +48,8 @@
             </select> <br>
 
             <input type="text" class="wisata" placeholder="Nama Wisata"> <br>
+
+            <input type="text" class="deskripsi" placeholder="Deskripsi"> <br>
 
             <input type="text" class="harga" placeholder="Harga Tiket"> <br>
 
