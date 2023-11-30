@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(/font/Poppins.ttf) format('truetype');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.head {
+    width: 100%;
+    border-bottom: solid black 1px;
+    margin: auto; 
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    display: block; /* Untuk menghilangkan default bottom space pada elemen img */
+    margin: 0 auto; /* Untuk mengatur img ke tengah */
+}
+
+.button input {
+    width: 80%;
+    padding: 8%;
+    background-color: #BE2828;
+    color: azure;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+.button input:hover {
+    background-color: #181313;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.add, .edit, .track {
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
+}
+
+.content a {
+    color: #181313;
+    position: relative; /* Menambahkan properti position relative untuk menyertakan posisi relatif pada link. */
+    text-decoration: none; /* Menghilangkan garis bawah bawaan dari tautan. */
+}
+.content a:hover {
+    color: #181313;
+}
+/* Menambahkan transisi pada border-bottom untuk efek animasi. */
+.content a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 50%;
+    background-color: #181313;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Menambahkan transisi pada width dan left. */
+    border-radius: 5px;
+}
+.content a:hover::before {
+    width: 100%; /* Membuat lebar garis bawah menjadi 100% ketika dihover. */
+    left: 0; /* Menyesuaikan posisi left agar garis bawah mulai dari ujung kiri link. */
+}
+
