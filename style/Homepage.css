@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Poppins';
-    src: url(/font/Poppins.ttf) format('truetype');
+    src: url(../font/Poppins.ttf) format('truetype');
 }
 
 html, body {
@@ -16,8 +16,7 @@ html, body {
 .welcome {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),
-    rgba(4, 9, 30, 0.7)), url(/assets/8.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/assets/8.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
