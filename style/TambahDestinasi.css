@@ -57,7 +57,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.kota, .wisata, .harga {
+.kota, .wisata, .harga, .deskripsi {
     margin-bottom: 5%;
     padding: 2%;
 }
@@ -65,7 +65,7 @@
     margin-top: 10%;
     width: 60%;
 }
-.wisata, .harga {
+.wisata, .harga, .deskripsi {
     width: 55%;
 }
 
