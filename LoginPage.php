@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Periksa apakah ada pesan kesalahan
+if (isset($_SESSION['error_message'])) {
+    $error_message = $_SESSION['error_message'];
+    unset($_SESSION['error_message']); // Hapus pesan kesalahan setelah ditampilkan
+} else {
+    $error_message = "";
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,7 +39,14 @@
             
             <div class="form align-items-center text-center">
                 <p class="pt-3 fs-6">Masuk untuk dapatkan paket liburan terbaik Anda!</p> <br>
-                <form onsubmit="return validasi()">
+  
+                <?php if ($error_message): ?>
+                    <div class="error-message">
+                        <?php echo $error_message; ?>
+                    </div>
+                <?php endif; ?>
+
+                <form method="post" action="php/loginController.php" onsubmit="return validasi()">
                     <input type="text" name="username" class="user mt-2 mb-4" placeholder="Username"> <br>
                     <input type="password" name="password" class="pass mt-4" id="inputPassword" placeholder="Password"> <br>
                     <div class="form-cbx">
@@ -45,7 +65,7 @@
 
 
 
-    <script src="/script/LoginPage.js"></script>
+    <script src="script/LoginPage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
