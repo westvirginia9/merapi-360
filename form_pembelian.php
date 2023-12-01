@@ -14,21 +14,17 @@ if (isset($_GET['id'])) {
         $row = $result->fetch_assoc();
         $_SESSION['id_paket'] = $row['id_paket'];
         $_SESSION['harga_paket'] = $row['harga'];
-        $_SESSION['gambar_paket'] = $row['gambar']; // Tambahkan informasi gambar
+        $_SESSION['gambar_paket'] = $row['gambar'];
     } else {
-        // Tindakan jika informasi paket tidak ditemukan (bisa menampilkan pesan kesalahan)
         header("Location: PaketJogja.php");
         exit();
     }
 } else {
-    // Tindakan jika parameter ID tidak ditemukan (bisa menampilkan pesan kesalahan)
     header("Location: PaketJogja.php");
     exit();
 }
 
-// Pastikan variabel $harga_paket dan $gambar_paket telah didefinisikan sebelum digunakan
 if (!isset($_SESSION['harga_paket']) || !isset($_SESSION['gambar_paket'])) {
-    // Tindakan jika variabel belum didefinisikan (bisa menampilkan pesan kesalahan)
     header("Location: PaketJogja.php");
     exit();
 }
@@ -63,21 +59,16 @@ $gambar_paket = $_SESSION['gambar_paket'];
                     <div class="col-12 px-4">
                         <div class="d-flex align-items-end mt-4 mb-2">
                         <?php
-    // Cek apakah ada parameter id pada URL
     if (isset($_GET['id'])) {
-        // Ambil id paket dari URL
         $id_paket = $_GET['id'];
 
-        // Query untuk mendapatkan data paket berdasarkan id
         $query = "SELECT * FROM paket WHERE id_paket = $id_paket";
         $result = $koneksi->query($query);
 
-        // Tampilkan nama paket dan kapasitas jika data ditemukan
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             echo '<p class="h4 m-0">' . $row['nama_paket'] . '</p>';
 
-            // Periksa apakah kolom 'kapasitas' ada dalam hasil query
             if (isset($row['kapasitas'])) {
                 echo '<p class="ps-3 text-muted">' . $row['kapasitas'] . '</p>';
             } else {
@@ -85,7 +76,6 @@ $gambar_paket = $_SESSION['gambar_paket'];
             }
         }
     } else {
-        // Tampilkan teks default jika tidak ada parameter id pada URL
         echo '<p class="h4 m-0">Paket Tidak Dipilih</p>';
         echo '<p class="ps-3 text-muted">N/A</p>';
     }
