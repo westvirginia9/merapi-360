@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(/font/Poppins.ttf) format('truetype');
+}
+
+html, body {
+    background-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.welcome {
+    min-height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),
+    rgba(4, 9, 30, 0.7)), url(/assets/jogja.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    flex: 1;
+    text-align: right;
+}
+.nav-link ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-link ul li a {
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-link ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: azure;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-link ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.kota-drop {
+    display: none;
+    position: absolute;
+    background: none;
+    min-width: 160px;
+    z-index: 1;
+}
+.kota-drop a {
+    color: rgb(255, 165, 55);
+    padding-top: 12px;
+    padding-right: 30px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.kota-drop a:hover {
+    font-size: large;
+}
+.dropdown:hover .kota-drop {
+    display: block;
+}
+
+.akun-drop {
+    display: none;
+    position: absolute;
+    background: none;
+    min-width: 160px;
+    z-index: 1;
+}
+.akun-drop a {
+    color: rgb(255, 165, 55);
+    padding-top: 12px;
+    padding-right: 50px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.akun-drop a:hover {
+    font-size: large;
+}
+.dropdown:hover .akun-drop {
+    display: block;
+}
+
+.mid-text {
+    width: 90%;
+    color: azure;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.mid-text h1 {
+    font-size: 50px;
+}
+.mid-text p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: azure;
+}
+
+.kotakBtn {
+    display: inline-block;
+    text-decoration: none;
+    color: azure;
+    border: solid 1px azure;
+    padding: 12px 34px;
+    font-size: 12px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.kotakBtn:hover {
+    border: solid 1px #BE2828;
+    background: #BE2828;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+
+
+
+
+
+
+.pilih{
+    width: 100%;
+    margin: auto;
+}
+.pilih h2 {
+    padding: 20px;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    float: left;
+    margin-left: 5%;
+    text-align: center;
+    margin-bottom: 30%;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }

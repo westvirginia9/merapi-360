@@ -16,7 +16,7 @@ html, body {
 .welcome {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(assets/8.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(/assets/8.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -193,19 +193,28 @@ nav .fa {
     justify-content: space-between;
 }
 .package-col {
-    flex-basis: 31%;
-    border-radius: 10px;
+    flex-basis: 25%;
     margin-bottom: 5%;
     text-align: center;
 }
-.package-col a img {
-    width: 80%;
-    border-radius: 10px;
-    transition: transform 0.3s;
+.image {
+    margin: 10%;
+    padding: 0;
+    border: solid 1px white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
 }
-.package-col a:hover img {
+.image img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.package-col img:hover {
     transform: scale(1.2);
 }
+
 
 .lapor {
     margin: 100px auto;
