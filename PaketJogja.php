@@ -5,6 +5,27 @@ if (isset($_GET['logout'])) {
     session_destroy(); 
     header("Location: LoginPage.php"); 
     exit();
+
+    if (isset($_GET['id'])) {
+        $id_paket = $_GET['id'];
+    
+        $query = "SELECT * FROM paket WHERE id_paket = $id_paket";
+        $result = $koneksi->query($query);
+    
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $_SESSION['id_paket'] = $row['id_paket'];
+            $_SESSION['harga_paket'] = $row['harga'];
+        } else {
+            // Tindakan jika informasi paket tidak ditemukan (bisa menampilkan pesan kesalahan)
+            header("Location: PaketJogja.php");
+            exit();
+        }
+    } else {
+        // Tindakan jika parameter ID tidak ditemukan (bisa menampilkan pesan kesalahan)
+        header("Location: PaketJogja.php");
+        exit();
+    }
 }
 ?>
 
@@ -73,7 +94,6 @@ if (isset($_GET['logout'])) {
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            // Ambil data paket dan tampilkan dalam card
             echo '<div class="card">';
             echo '<img src="admin/uploads/' . $row['gambar'] . '" alt="' . $row['nama_paket'] . '" style="width:100%">';
             echo '<h1>' . $row['nama_paket'] . '</h1>';
@@ -88,20 +108,7 @@ if (isset($_GET['logout'])) {
 
     $koneksi->close();
     ?>
-        <div class="card">
-            <img src="assets/ullen-sentalu.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Paket Baladewa</h1>
-            <p class="price">Rp 600.000</p>
-            <p>RASAKAN SENSASI!!!</p>
-            <p><button>Tambahkan</button></p>
-          </div>
-        <div class="card">
-            <img src="assets/paketjogja.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Paket Petruk</h1>
-            <p class="price">Rp 700.000</p>
-            <p>RASAKAN SENSASI!!!</p>
-            <p><button>Tambahkan</button></p>
-          </div>
+        
     </section>
 
 </body>
