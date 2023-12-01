@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: LoginPage.php"); 
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,19 +42,28 @@
                             <a href="">Profil</a>
                             <a href="">Keranjang</a>
                             <a href="">Favorit</a>
-                            <a href="/LoginPage.html">Logout</a>
+                            <a href="?logout">Logout</a>
                         </div>
                     </div>
                 </ul>
             </div>
+
+            <?php
+        if (isset($_SESSION['username'])) {
+            $username = $_SESSION['username'];
+        ?>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="mid-text">
-            <h1>Selamat Datang!</h1>
+            <h1>Selamat Datang, <?php echo $username; ?>!</h1>
             <p>Jelajahi tiap tempat wisata di sekitar Gunung Merapi bersama kami</p>
             <a href="" class="kotakBtn">Telusuri Sekarang</a>
         </div>
+
+        <?php
+        }
+        ?>
     </section>
 
 
@@ -57,8 +75,8 @@
         <div class="package">
             <div class="package-col">
                 <div class="image">
-                    <a href="/PaketJogja.html">
-                        <img src="/assets/jogja.jpg" alt="">
+                    <a href="PaketJogja.php">
+                        <img src="assets/jogja.jpg" alt="">
                     </a>
                 </div>
                 <h3>Jogjakarta</h3>
@@ -68,7 +86,7 @@
             <div class="package-col">
                 <div class="image">
                     <a href="">
-                        <img src="/assets/magelang.jpg" alt="">
+                        <img src="assets/magelang.jpg" alt="">
                     </a>
                 </div>
                 <h3>Magelang</h3>
@@ -78,7 +96,7 @@
             <div class="package-col">
                 <div class="image">
                     <a href="">
-                        <img src="/assets/klaten.jpg" alt="">
+                        <img src="assets/klaten.jpg" alt="">
                     </a>
                 </div>
                 <h3>Klaten</h3>
@@ -88,7 +106,7 @@
             <div class="package-col">
                 <div class="image">
                     <a href="">
-                        <img src="/assets/boyolali.jpg" alt="">
+                        <img src="assets/boyolali.jpg" alt="">
                     </a>
                 </div>
                 <h3>Boyolali</h3>

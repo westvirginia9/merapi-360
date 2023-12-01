@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Poppins';
-    src: url(/font/Poppins.ttf) format('truetype');
+    src: url(../font/Poppins.ttf) format('truetype');
 }
 
 html, body {
@@ -17,7 +17,7 @@ html, body {
     min-height: 70vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),
-    rgba(4, 9, 30, 0.7)), url(/assets/jogja.jpg);
+    rgba(4, 9, 30, 0.7)), url(../assets/jogja.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -196,3 +196,5 @@ nav .fa {
   .card button:hover {
     opacity: 0.7;
   }
+
+ 
