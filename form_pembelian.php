@@ -3,6 +3,8 @@
 session_start();
 
 include "php/koneksi.php";
+$nama_db = "djawir_db";
+$koneksi -> query("USE $nama_db");
 
 if (isset($_GET['id'])) {
     $id_paket = $_GET['id'];

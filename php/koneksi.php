@@ -3,7 +3,7 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$nama_db = "djawir_db";
+$nama_db = "";
 
 $koneksi = new mysqli($server, $username, $password, $nama_db);
 
