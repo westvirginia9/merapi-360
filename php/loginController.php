@@ -6,13 +6,15 @@ include "koneksi.php";
 $nama_db = "djawir_db";
 $koneksi->query("USE $nama_db");
 
+if ($koneksi->connect_error) {
+    die("Koneksi ke database gagal: " . $koneksi->connect_error);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    if ($koneksi->connect_error) {
-        die("Koneksi ke database gagal: " . $koneksi->connect_error);
-    }
+    
 
     $query = $koneksi->prepare("SELECT * FROM user WHERE username=?");
     $query->bind_param("s", $username);
@@ -25,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($password == $stored_password) {
             $_SESSION['username'] = $username;
+            
             header("Location: ../Homepage.php");
             exit();
         } else {
@@ -39,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    $koneksi->close();
+    
 }
+$koneksi->close();
 ?>

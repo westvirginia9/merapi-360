@@ -1,9 +1,35 @@
 <?php
 session_start();
 
+include "php/koneksi.php"; // Sesuaikan dengan nama file koneksi Anda
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Lakukan query untuk mendapatkan data user berdasarkan username
+    // Gantilah ini dengan koneksi dan query yang sesuai dengan aplikasi Anda
+    $query = "SELECT id_user FROM user WHERE username = '$username' AND password = '$password'";
+    $result = $koneksi->query($query);
+
+    if ($result && $result->num_rows > 0) {
+        // Jika data user ditemukan, ambil ID pengguna dan setel dalam sesi
+        $user_data = $result->fetch_assoc();
+        $id_user = $user_data['id_user'];
+        $_SESSION['id_user'] = $id_user;
+
+        // Redirect ke homepage atau halaman lainnya
+        header("Location: Homepage.php");
+        exit();
+    } else {
+        // Jika login gagal, mungkin tampilkan pesan error atau redirect ke halaman login
+        echo "Login failed";
+    }
+}
+
 if (isset($_GET['logout'])) {
     session_destroy();
-    header("Location: LoginPage.php"); 
+    header("Location: index.html"); 
     exit();
 }
 ?>
@@ -39,7 +65,7 @@ if (isset($_GET['logout'])) {
                     <div class="dropdown">
                         <li><a href="">Akun Saya</a></li>
                         <div class="akun-drop">
-                            <a href="">Profil</a>
+                            <a href="ProfilePage.php">Profil</a>
                             <a href="">Keranjang</a>
                             <a href="">Favorit</a>
                             <a href="?logout">Logout</a>

@@ -13,7 +13,9 @@ $sql = "CREATE TABLE user (
     conf_password varchar(30) ,
     email varchar(30),
     no_telfon varchar(15),
-    jenis_kelamin ENUM('Laki-laki', 'Perempuan')
+    jenis_kelamin ENUM('Laki-laki', 'Perempuan'),
+    foto_profil BLOB,
+    alamat TEXT
     
 )";
 
