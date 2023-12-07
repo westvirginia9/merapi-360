@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stored_password = $user_data['password'];
 
         if ($password == $stored_password) {
+            $_SESSION['id_user'] = $user_data['id_user'];
             $_SESSION['username'] = $username;
             
             header("Location: ../Homepage.php");
