@@ -85,7 +85,7 @@ body {
 }
 
 .form-cbx {
-    margin-right: 340px;
+    margin-right: 315px;
     margin-top: 2%;
     margin-bottom: 6%;
 }
@@ -113,7 +113,7 @@ body {
     cursor: pointer;
 }
 .button:hover {
-    background-color: rgb(99, 99, 198);
+    background-color: #f0a22d;
     border: none;
     width: 20%;
     color: azure;

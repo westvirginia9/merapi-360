@@ -1,12 +1,15 @@
 @font-face {
     font-family: 'Poppins';
-    src: url(../font/Poppins.ttf) format('truetype');
+    src: url(/font/Poppins.ttf) format('truetype');
 }
 
 body {
     background-size: cover;
-    background-image: url(../assets/bg-merapi.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/assets/bg-merapi.jpg);
     margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -24,15 +27,32 @@ body {
     margin: auto;
     display: inline-block;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
 }
 .navbar a {
     color: azure;
+    position: relative; 
+    text-decoration: none; 
 }
 .navbar a:hover {
     color: rgb(190, 40, 40);
-    border-bottom: solid rgb(190, 40, 40) 3px;
+}
+/* Menambahkan transisi pada border-bottom untuk efek animasi. */
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 50%;
+    background-color: rgb(190, 40, 40);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Menambahkan transisi pada width dan left. */
+    border-radius: 5px;
+}
+.navbar a:hover::before {
+    width: 100%; /* Membuat lebar garis bawah menjadi 100% ketika dihover. */
+    left: 0; /* Menyesuaikan posisi left agar garis bawah mulai dari ujung kiri link. */
 }
 
 .page {
@@ -49,17 +69,33 @@ body {
 .form {
     width: 100%;
 }
-
 .form-value {
     width: 70%;
     outline-color: rgba(190, 40, 40, 0.5);
 }
-
 .form-label {
     text-align: start;
     width: 70%;
     display: inline-block;
 }
+
+.form-cbx {
+    margin-right: 66%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+.cbox {
+    width: 17px;
+    height: 17px;
+    margin-right: 1%;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+.cbox-label {
+    position: absolute;
+    font-size: small;
+}
+
 
 .button {
     background-color: rgb(190, 40, 40);
@@ -69,11 +105,13 @@ body {
     padding-top: 1%;
     padding-bottom: 1%;
     margin-bottom: 8%;
+    transition: 0.3s;
 }
 .button:hover {
-    background-color: rgb(99, 99, 198);
+    background-color: #f0a22d;
     border: none;
     width: 20%;
     color: azure;
+    transition: background-color 0.3s;
 }
 
