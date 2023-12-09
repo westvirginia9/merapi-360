@@ -182,6 +182,9 @@ nav .fa {
     height: 60px;
     overflow: hidden;
 }
+.icon:hover {
+    background-color: #ffdfae;
+}
 .fa-camera {
     position: absolute;
     top: 50%;

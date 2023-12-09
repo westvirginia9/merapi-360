@@ -270,3 +270,111 @@ button {
     cursor: pointer;
     background-color: #f0a22d;
 }
+
+
+
+
+/* STYLE FORMULIR DATA DIRI */
+.formulir {
+    width: 80%;
+    display: flex;
+    margin: 5% auto;
+    border: solid 1px black;
+}
+
+.datadiri {
+    width: 60%;
+    display: inline-block;
+}
+.datadiri h1 {
+    text-align: start;
+    border-bottom: solid 1px black;
+    width: 95%;
+    margin-left: 3%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Jarak antara elemen-elemen */
+    width: 100%;
+    margin: 2% 3% 3% 3%;
+}
+.label-input {
+    display: flex;
+    flex-direction: column;
+}
+.label-input input {
+    display: block;
+    width: 80%;
+    font-size: 12px;
+    text-align: start;
+    padding: 3%;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    margin: 0 3% 5% 3%;
+}
+
+/* STYLE FORMULIR DETAIL PESANAN */
+.pesanan {
+    display: inline-block;
+    width: 40%;
+}
+.pesanan h1 {
+    text-align: start;
+    border-bottom: solid 1px black;
+    width: 95%;
+    margin-left: 3%;
+}
+.produk {
+    display: flex;
+    margin: 8% auto;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+.produk img {
+    width: 20%;
+}
+.produk input {
+    margin-left: 2%;
+    width: 50%;
+    height: 30px;
+    text-align: left;
+}
+#paket {
+    width: 55%;
+}
+#harga{
+    width: 35%;
+}
+#tiket {
+    width: 10%;
+}
+
+.total-harga {
+    display: flex;
+    width: 95%;
+    margin: 7% 0 10% 3%;
+}
+#total {
+    width: 70%;
+    text-align: right;
+    margin-left: 3%;
+}
+
+#bayar {
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 10% auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+  
