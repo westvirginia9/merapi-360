@@ -111,7 +111,7 @@ if (isset($_GET['logout'])) {
 
             <div class="package-col">
                 <div class="image">
-                    <a href="">
+                    <a href="paketMagelang.php">
                         <img src="assets/magelang.jpg" alt="">
                     </a>
                 </div>
@@ -121,7 +121,7 @@ if (isset($_GET['logout'])) {
 
             <div class="package-col">
                 <div class="image">
-                    <a href="">
+                    <a href="paketKlaten.php">
                         <img src="assets/klaten.jpg" alt="">
                     </a>
                 </div>
@@ -131,7 +131,7 @@ if (isset($_GET['logout'])) {
 
             <div class="package-col">
                 <div class="image">
-                    <a href="">
+                    <a href="paketBoyolali.php">
                         <img src="assets/boyolali.jpg" alt="">
                     </a>
                 </div>

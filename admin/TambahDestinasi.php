@@ -1,23 +1,9 @@
-<?php
-
-include "../php/koneksi.php"
-
-
-
-?>
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tambah Destinasi Wisata</title>
     <link rel="stylesheet" href="../style/TambahDestinasi.css">
 </head>
 <body>
@@ -32,7 +18,7 @@ include "../php/koneksi.php"
                         <h1>Tambah Destinasi Wisata</h5>
                     </td>
                     <td class="button" width="120">
-                        <input type="submit" value="Logout" id="logoutButton">
+                        <a href="?logout">Logout</a>
                     </td>
                 </tr>
             </table>
@@ -42,6 +28,17 @@ include "../php/koneksi.php"
             <form action="tambahPaket.php" method="post" enctype="multipart/form-data">
                 <?php include "kotaController.php"; ?>
                 <br>
+
+                <select class="kota" name="kota" id="kota">
+                    <option value="" disabled selected hidden>Pilih Kota</option>
+                    <?php
+                        // Loop through the kota options
+                        while ($row = $result->fetch_assoc()) {
+                            $nama_kota = $row['nama_kota'];
+                            echo "<option value='$nama_kota'>$nama_kota</option>";
+                        }
+                    ?>
+                </select> <br>
 
                 <input type="text" class="wisata" name="nama_wisata" placeholder="Nama Wisata" required> <br>
 
@@ -56,9 +53,8 @@ include "../php/koneksi.php"
                 <input type="submit" value="Batal" id="batalUbah">
             </form>
         </div>
-
     </div>
 
-    <script src="/script/TambahDestinasi.js"></script>
+    <script src="../script/TambahDestinasi.js"></script>
 </body>
 </html>

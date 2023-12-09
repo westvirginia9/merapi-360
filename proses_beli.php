@@ -8,7 +8,6 @@ $alamat = $_POST['alamat'];
 $email = $_POST['email'];
 $id_paket = $_POST['id_paket']; // Sesuaikan dengan nama input di form
 $jumlah_tiket = $_POST['jumlah_tiket']; // Sesuaikan dengan nama input di form
-$tanggal_berlibur = $_POST['tanggal_berlibur']; // Sesuaikan dengan nama input di form
 
 // Menghitung biaya berdasarkan jumlah tiket dan harga tiket (diasumsikan harga tiket ada di database paket)
 $query_harga = mysqli_query($koneksi, "SELECT harga FROM paket WHERE id_paket = '$id_paket'");

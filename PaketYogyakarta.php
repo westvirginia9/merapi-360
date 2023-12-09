@@ -99,7 +99,7 @@ if (isset($_GET['logout'])) {
             echo '<h1>' . $row['nama_paket'] . '</h1>';
             echo '<p class="price">Rp ' . number_format($row['harga'], 0, ',', '.') . '</p>';
             echo '<p>' . $row['deskripsi'] . '</p>';
-            echo '<button><a style="text-decoration:none" href="form_pembelian.php?id=' . $row['id_paket'] . '">Tambahkan</a></button>';
+            echo '<button><a style="text-decoration:none" href="form_beli.php?id=' . $row['id_paket'] . '">Tambahkan</a></button>';
             echo '</div>';
         }
     } else {

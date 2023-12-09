@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 include "php/koneksi.php";
 
 session_start();
@@ -33,7 +33,7 @@ if (isset($_SESSION['id_user'])) {
 } else {
     echo "ID pengguna tidak ada dalam sesi.";
 }
-?> -->
+?>
 
 
 <!DOCTYPE html>
@@ -93,36 +93,47 @@ if (isset($_SESSION['id_user'])) {
                 <div class="img-pesanan">
                 <?php echo '<img src="admin/uploads/' . $row['gambar'] . '" alt="' . $row['nama_paket'] . '" style="width:80%">'; ?>
                 </div>
-        <form action="proses_beli.php" method="post">
-            <div class="desc-pesanan">
-                <p>Paket Wisata: <?php echo $nama_paket; ?></p>
-                <p>Deskripsi: <?php echo $deskripsi; ?></p>
-                <p>Tanggal Berlibur:</p>
-                <p>Nama Pembeli: <?php echo $nama_lengkap; ?></p>
-                <div class="qty-control">
-                    <p>Jumlah Tiket:</p>
-                    <button onclick="updateQuantity(-1)">-</button>
-                    <input type="text" id="quantity" value="1" oninput="updateQuantity()">
-                    <button onclick="updateQuantity(1)">+</button>
-                </div>
+                <form action="proses_beli.php" method="post">
+                    <div class="desc-pesanan">
+                        <p>Paket Wisata: <?php echo $nama_paket; ?></p>
+                        <p>Deskripsi: <?php echo $deskripsi; ?></p>
+                        <p>Tanggal Berlibur:</p>
+                        <p>Nama Pembeli: <?php echo $nama_lengkap; ?></p>
+
+                        <div class="qty-control">
+                            <p>Jumlah Tiket:</p>
+                            <button onclick="updateQuantity(-1)">-</button>
+                            <input type="text" id="quantity" value="1" oninput="updateQuantity()">
+                            <button onclick="updateQuantity(1)">+</button>
+                        </div>
+
+                        
+                    </div>
             </div>
+
+            
         </div>
 
-        <div class="kanan">
-            <div class="box-kanan">
-                <h1>Ringkasan Pesanan</h1>
-                <p id="hargaTiket">Harga Tiket (satuan) : Rp <?php echo $harga; ?></p>
-                <input type="hidden" id="hargaSatuan" value="<?php echo $harga; ?>">
-                <p id="totalPembelian">Total Pembelian :</p>
-                <p id="mp">Metode Pembayaran :</p>
-                <p id="totalHarga">Total Harga : Rp 0</
-                <input type="hidden" id="totalPembelianInput" value="0
-                <input type="submit" value="Bayar">
-            </div>
-        </div>
-        </form> 
+                        <div class="kanan">
+                            <div class="box-kanan">
+                                <h1>Ringkasan Pesanan</h1>
+                                <p id="hargaTiket">Harga Tiket (satuan) : Rp <?php echo $harga; ?></p>
+                                <input type="hidden" id="hargaSatuan" value="<?php echo $harga; ?>">
+                                <p id="totalPembelian">Total Pembelian :</p>
+                                <p id="mp">Metode Pembayaran :</p>
+                                <p id="totalHarga">Total Harga : Rp 0</p>
+
+                                <input type="hidden" id="totalPembelianInput" value="0">
+
+                                <input type="submit" value="Bayar">
+                            </div>
+                        </div>
+                </form>
 
     </section> -->
+
+
+
 
     <!-- FORMULIR PEMBAYARAN -->
     <section>
@@ -149,7 +160,7 @@ if (isset($_SESSION['id_user'])) {
 
                     <div class="label-input">
                         <label for="pass">Kode Voucher</label>
-                        <input type="text" id="kode" placeholder="Masukkan kode voucher Anda (jika memliki)">
+                        <input type="text" id="kode" placeholder="Masukkan kode voucher (jika memliki)">
                     </div>
                 </div>
 
