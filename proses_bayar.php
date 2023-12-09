@@ -20,7 +20,7 @@ $query = "INSERT INTO transaksi_user (nama_lengkap, nama_paket, alamat, no_telfo
 
 
 if (mysqli_query($koneksi, $query)) {
-    echo "Data transaksi_user berhasil ditambahkan";
+    echo "Data transaksi_user berhasil yey ditambahkan";
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
 }
