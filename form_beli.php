@@ -148,7 +148,7 @@ if (isset($_GET['id'])) {
 
     <!-- FORMULIR PEMBAYARAN -->
     <section>
-        <form action="" method="post">
+        <form action="proses_bayar.php" method="post">
         <div class="formulir">
             <div class="datadiri">
                 <h1>Data Diri</h1>
@@ -165,19 +165,20 @@ if (isset($_GET['id'])) {
                     </div>
 
                     <div class="label-input">
-                        <label for="telfon">Telepon</label>
-                        <input type="text" id="telfon" name="no_telfon" value="<?php echo $no_telfon; ?>" placeholder="Masukkan nomor telepon Anda">
+                        <label for="no_telfon">Telepon</label>
+                        <input type="text" id="no_telfon" name="no_telfon" value="<?php echo $no_telfon; ?>" placeholder="Masukkan nomor telepon Anda">
                     </div>
 
                     <div class="label-input">
                         <label for="pass">Kode Voucher</label>
-                        <input type="text" id="kode" placeholder="Masukkan kode voucher Anda (jika memliki)">
+                        <input type="text" id="kode"  placeholder="Masukkan kode voucher Anda (jika memliki)">
                     </div>
                 </div>
 
                 <div class="address">
-                    <label for="alamat">Alamat</label>
-                    <textarea name="" id="alamat" rows="5"></textarea>
+                    <label name="alamat" for="alamat">Alamat</label>
+                    <textarea name="alamat" id="alamat" rows="5"></textarea>
+                    <input  type="hidden" name="alamat">
                 </div>
             </div>
 
@@ -186,15 +187,16 @@ if (isset($_GET['id'])) {
 
                 <div class="produk">
                 <img src="admin/uploads/<?php echo $gambar; ?>" alt="p">
-                <input type="hidden" name="gambar_paket" value="<?php echo $gambar; ?>">
-                <input type="text" id="paket" name="nama_paket" value="<?php echo $nama_paket; ?>" placeholder="Nama Paket" disabled>
-                    <input type="text" id="harga" name="harga_paket" value="<?php echo $harga_paket; ?>" placeholder="Harga Paket" disabled>
-                    <input type="text" id="tiket" name="jumlah_tiket" value="<?php echo $jumlah_tiket; ?>" placeholder="Tiket" >
+                
+                <input type="text" name="nama_paket" value="<?php echo $nama_paket; ?>">
+                <input type="text" name="harga_paket" value="<?php echo $harga_paket; ?>">
+                <p>Jumlah Tiket: <?php echo $jumlah_tiket; ?></p>
+                    <input type="number" id="kuantitas" name="kuantitas" value="<?php echo $jumlah_tiket; ?>" placeholder="Tiket" >
                 </div>
 
                 <div class="total-harga">
                     <label for="total">Total Harga:</label>
-                    <input type="text" id="total" name="total_harga" value="<?php echo $total_harga; ?>" placeholder="Jumlah Total" disabled>
+                    <input type="text" id="harga" name="total_harga" value="<?php echo $total_harga; ?>" placeholder="Jumlah Total" disabled>
                 </div>
 
                 <input type="submit" id="bayar" value="Bayar Sekarang">
