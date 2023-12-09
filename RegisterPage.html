@@ -29,31 +29,31 @@
 
       <div class="form" align="center">
         <form id="registForm" onsubmit="return validasi()" action="php/proses_daftar.php" method="post">
-          <label class="form-label pt-3" for="name">Nama Lengkap</label> <br>
-          <input class="form-value" type="text" id="name" required> <br>
+          <label class="form-label pt-3" for="nama_lengkap">Nama Lengkap</label> <br>
+          <input class="form-value" type="text" id="nama_lengkap" name="nama_lengkap" required> <br>
 
           <label class="form-label pt-3" for="username">Username</label> <br>
-          <input class="form-value" type="text" id="username" required> <br>
+          <input class="form-value" type="text" id="username" name="username" required> <br>
 
           <label class="form-label pt-3" for="password">Password</label> <br>
-          <input class="form-value" type="password" id="inputPassword" required> <br>
+          <input class="form-value" type="password" id="password" name="password" required> <br>
           <div class="form-cbx">
             <input class="cbox" type="checkbox" id="showPwd" onchange="showPassword()">
             <label class="cbox-label" for="showPwd"> Tampilkan Password</label>
           </div>
 
-          <label class="form-label pt-3" for="konfirmasiPass">Konfirmasi Password</label> <br>
-          <input class="form-value" type="password" id="konfirmasiPass" required> <br>
+          <label class="form-label pt-3" for="conf_password">Konfirmasi Password</label> <br>
+          <input class="form-value" type="password" id="conf_password" name="conf_password" required> <br>
           <div class="form-cbx">
             <input class="cbox" type="checkbox" id="showConf" onchange="showConfirm()">
             <label class="cbox-label" for="showConf"> Tampilkan Password</label>
           </div>
 
           <label class="form-label pt-3" for="email">Email</label> <br>
-          <input class="form-value" type="text" id="email" required> <br>
+          <input class="form-value" type="text" id="email" name="email" required> <br>
 
-          <label class="form-label pt-3" for="nomor">No. Handphone</label> <br>
-          <input class="form-value" type="text" id="nomor" required> <br>
+          <label class="form-label pt-3" for="no_telfon">No. Handphone</label> <br>
+          <input class="form-value" type="text" id="no_telfon" name="no_telfon" required> <br>
 
           <label class="form-label pt-3" for="gender">Jenis Kelamin</label> <br>
           <select class="form-value pt-1 pb-1 ps-1" name="gender" id="gender" required>

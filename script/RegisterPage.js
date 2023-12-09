@@ -29,13 +29,13 @@ function validasi() {
 }
 
 function showPassword() {
-  var passwordInput = document.getElementById("inputPassword");
+  var passwordInput = document.getElementById("password");
   var showPwdCheckbox = document.getElementById("showPwd");
 
   passwordInput.type = showPwdCheckbox.checked ? "text" : "password";
 }
 function showConfirm() {
-  var konfirmasiInput = document.getElementById("konfirmasiPass");
+  var konfirmasiInput = document.getElementById("conf_password");
   var showConfCheckbox = document.getElementById("showConf");
 
   konfirmasiInput.type = showConfCheckbox.checked ? "text" : "password";

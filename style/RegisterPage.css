@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Poppins';
-    src: url(/font/Poppins.ttf) format('truetype');
+    src: url(../font/Poppins.ttf) format('truetype');
 }
 
 body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(/assets/bg-merapi.jpg);
+    background-image: url(../assets/bg-merapi.jpg);
     margin: 0;
     padding: 0;
 }
